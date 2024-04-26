@@ -569,21 +569,7 @@ class SendSms():
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> siparisdirekt.com")
 
 
-    #uysalmarket.com.tr
-    def Uysal(self):
-        try:
-            url = "https://api.uysalmarket.com.tr/api/mobile-users/send-register-sms"
-            json = {"phone_number": self.phone}
-            r = requests.post(url=url, json=json)
-            if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.uysalmarket.com.tr")
-                self.adet += 1
-            else:
-                raise
-        except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.uysalmarket.com.tr")
-    
-    
+   
     
     
     
